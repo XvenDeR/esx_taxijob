@@ -393,7 +393,7 @@ end
 function OpenPutStocksMenu()
 	ESX.TriggerServerCallback('esx_taxijob:getPlayerInventory', function(inventory)
 		local elements = {}
-        
+
         for i=1, #inventory.items, 1 do
 			local item = inventory.items[i]
 
@@ -405,7 +405,7 @@ function OpenPutStocksMenu()
 				})
 			end
         end
-        
+
 		ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'stocks_menu', {
 			title    = _U('inventory'),
 			align    = 'top-left',
